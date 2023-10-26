@@ -26,9 +26,9 @@ def get_pets():
         )
     return jsonify(formatted_pets)
 
-@server.route('/hounds', methods=['GET'])
-def get_hounds():
-    pets = Pets.query.filter(Pets.breed == 'hound')
+@server.route('/cats', methods=['GET'])
+def get_cats():
+    pets = Pets.query.filter(Pets.breed == 'cat')
     formatted_pets = []
     for pet in pets:
         formatted_pets.append(
